@@ -1,0 +1,203 @@
+body {
+  margin: 10px;
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trigrid {
+  top: 15px;
+  display: grid;
+  width: 90px;
+  height: 90px;
+  grid-template-rows: repeat(3, 30px);
+  grid-template-columns: repeat(3, 30px);
+}
+
+.kocka {
+  border: 1px solid black;
+  animation-name: breathe;
+  animation-duration: 1.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes breathe {
+  50% {border: 8px solid black;}
+  100% {border: 1px solid black;}
+}
+
+.cetirigrid {
+  display: grid;
+  width: 120px;
+  height: 120px;
+  grid-template-rows: repeat(4, 30px);
+  grid-template-columns: repeat(4, 30px);
+}
+
+.I > .jen {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.I > .tri {
+  position: relative;
+  top: 60px;
+  left: -30px;
+}
+
+.I > .cetiri {
+  position: relative;
+  top: 90px;
+  left: -60px;
+}
+
+.I > .kocka {
+  background: cyan;
+}
+
+.J > .jen {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.J > .tri {
+  position: relative;
+  top: 60px;
+  left: -30px;
+}
+
+.J > .cetiri {
+  position: relative;
+  top: 30px;
+}
+
+.J > .kocka {
+  background: blue;
+}
+
+.L > .jen {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.L > .tri {
+  position: relative;
+  top: 60px;
+  left: -30px;
+}
+
+.L > .cetiri {
+  position: relative;
+  top: 30px;
+  left: 60px;
+}
+
+.L > .kocka {
+  background: orange;
+}
+
+.O > .jen {
+  position: relative;
+  top: 60px;
+  left: 30px;
+}
+
+.O > .dva {
+  position: relative;
+  top: 30px;
+}
+
+.O > .tri {
+  position: relative;
+  top: 30px;
+}
+
+.O > .cetiri {
+  position: relative;
+  top: 60px;
+  left: -30px;
+}
+
+.O > .kocka {
+  background: yellow;
+}
+
+.T > .jen {
+  position: relative;
+  top: 30px;
+}
+
+.T > .dva {
+  position: relative;
+  top: 30px;
+}
+
+.T > .tri {
+  position: relative;
+  top: 30px;
+}
+
+.T > .cetiri {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.T > .kocka {
+  background: purple;
+}
+
+.Z > .tri {
+  position: relative;
+  top: 30px;
+}
+
+.Z > .cetiri {
+  position: relative;
+  left: 30px;
+}
+
+.Z > .kocka {
+  background: red;
+}
+
+.S > .jen {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.S > .kocka {
+  background: green;
+}
+
+.cetirigrid, .trigrid {
+  margin-top: 10px;
+  margin-right: 100px;
+  animation-name: rotate;
+  animation-duration: 1.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  25% {transform: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .cetirigrid, .trigrid {
+    margin: 0 auto;
+  }
+}
